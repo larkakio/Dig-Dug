@@ -15,13 +15,14 @@ const techMono = Share_Tech_Mono({
   weight: "400",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://dig-dug.vercel.app";
+
 const baseAppId =
-  process.env.NEXT_PUBLIC_BASE_APP_ID ?? "";
+  process.env.NEXT_PUBLIC_BASE_APP_ID ?? "6a083421bc175abcdd5651f1";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  ),
+  metadataBase: new URL(siteUrl),
   title: "Neon Dig Dug",
   description:
     "Cyberpunk Dig Dug arcade on Base — swipe to dig, pump enemies, sync daily on-chain.",
