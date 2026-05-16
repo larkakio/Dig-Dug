@@ -20,7 +20,7 @@ cd ../contracts && forge test
 |----------|-------------|
 | `NEXT_PUBLIC_SITE_URL` | `https://dig-dug.vercel.app` |
 | `NEXT_PUBLIC_BASE_APP_ID` | `6a083421bc175abcdd5651f1` |
-| `NEXT_PUBLIC_BUILDER_CODE` | `bc_…` from base.dev → Settings → Builder Code |
+| `NEXT_PUBLIC_BUILDER_CODE` | `bc_2mlps8p4` (base.dev → Settings → Builder Codes) |
 | `NEXT_PUBLIC_CHECK_IN_CONTRACT_ADDRESS` | Deployed `CheckIn.sol` on Base mainnet (`0x145b30d487272D4595Af5bAb21389D5f306f8207`) |
 | `NEXT_PUBLIC_CHAIN_ID` | `8453` |
 
