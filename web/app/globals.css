@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --void: #050508;
+  --cyan-neon: #00f5ff;
+  --magenta-neon: #ff00aa;
+  --lime-neon: #b8ff00;
+}
+
+@theme inline {
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--void);
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+}
+
+.neon-title {
+  text-shadow:
+    0 0 8px rgba(0, 245, 255, 0.8),
+    0 0 20px rgba(255, 0, 170, 0.4);
+  animation: title-pulse 3s ease-in-out infinite;
+}
+
+@keyframes title-pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.25);
+  }
+}
+
+.neon-btn {
+  transition:
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+.neon-btn:hover:not(:disabled) {
+  box-shadow:
+    0 0 12px rgba(0, 245, 255, 0.5),
+    inset 0 0 12px rgba(0, 245, 255, 0.1);
+}
+
+.neon-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.glitch-text {
+  animation: glitch 0.4s steps(2) infinite;
+  text-shadow:
+    2px 0 #ff00aa,
+    -2px 0 #00f5ff;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-2px, 1px);
+  }
+  50% {
+    transform: translate(2px, -1px);
+  }
+  75% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
